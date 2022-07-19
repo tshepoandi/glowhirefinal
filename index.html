@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,100,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:100,400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:200,400,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!--<script src="https://use.fontawesome.com/20ab91acc4.js"></script> -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script>
+      (function () {
+        emailjs.init("5ZG1EjbkAu3aaSd8s");
+      })();
+    </script>
+    <script>
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = (Math.random() * 100000) | 0;
+            // these IDs from the previous steps
+            emailjs
+              .sendForm(
+                "service_glowhire",
+                "template_glowhire",
+                this,
+                "5ZG1EjbkAu3aaSd8s"
+              )
+              .then(
+                function () {
+                  alert(
+                    "Your Email has been sent , thank you for using our services"
+                  );
+                },
+                function (error) {
+                  console.log("FAILED...", error);
+                }
+              );
+          });
+      };
+    </script>
+
+    <title>Glow Studio's</title>
+    <link rel="icon" href="favicon.jpg" type="image/x-icon" />
+  </head>
+  <body>
+    <!--NAV BAR-->
+    <nav class="navbar">
+      <img src="./resources/logo.png" alt="" class="logo" />
+      <ul class="nav-links">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#events">Studios</a></li>
+        <li><a href="#explore">About</a></li>
+        <li class="ctn"><a href="#tours">Contact</a></li>
+      </ul>
+      <img src="./resources/menu.png" class="menu-btn" alt="" />
+    </nav>
+
+    <header id="Home">
+      <div class="header-content">
+        <h2>Glow Photo Film And Hire</h2>
+        <div class="line"></div>
+        <h1>
+          BRINGING EVERY
+          <b style="color: rgb(0, 189, 205)">VISION</b>
+          TO LIFE
+        </h1>
+        <a href="#events" class="ctn">BOOK</a>
+      </div>
+    </header>
+
+    <!-- Studios-->
+    <section id="events">
+      <div class="title">
+        <h1>Studios</h1>
+        <div class="line"></div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img
+            src="./resources/capetown.jpeg"
+            alt=""
+            srcset=""
+            class="hvr-curl-top-left"
+          />
+          <h4>Cape Town</h4>
+          <p>
+            SPACIOUS WITH PLENTY OF NATURAL LIGHT AND A FULLY FUNCTIONAL KITCHEN
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1VJPkOrAOa5IpQrw2I3ZTZXSWbNabeDN1/view?usp=sharing"
+            class="ctn"
+            >WEMBLEY STUDIO</a
+          >
+        </div>
+        <div class="col">
+          <img src="./resources/Joburg.jpeg" alt="" srcset="" />
+          <h4>Joburg</h4>
+          <p>
+            TWO SPACIOUS STUDIOS WITH PLENTY OF NATURAL LIGHT - 3 SIDED INFINITY
+            CURVE
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1ymRigg80O-DAlelI_UNP3NGJbax3MH9A/view?usp=sharing"
+            class="ctn"
+            >OXFORD STUDIO</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Studios-->
+    <section id="explore">
+      <div class="explore-content">
+        <h1>ABOUT US</h1>
+        <div class="line"></div>
+        <p class="content">
+          With locations in both Johannesburg and Cape Town, Glow Hire and Glow
+          Studios represent a large portion of the film and photography Studio
+          and Gear Hire industry. The original Glow Hire started operating in
+          2006 and after 16 years of trading, it has grown exponentially. Our
+          contemporary Studios in Johannesburg and Cape Town offers a space that
+          caters for fashion shoots, food, lifestyle and film with plenty of
+          space for a large team. The studios were designed and built by
+          photographers and are fully functional to all standards, and is no
+          doubt the best of all studios on offer. In both Johannesburg and Cape
+          Town we have a solid representation of Film and Photography for hire.
+          Camera, lens, lighting and grip are available and we have delivery
+          facilities.
+        </p>
+      </div>
+    </section>
+    <section id="tours">
+      <div class="row">
+        <div class="col content-col">
+          <h1>PLACE YOUR GEAR ORDER NOW</h1>
+          <div class="line"></div>
+          <p>
+            We do our best to get your quotations to you as quick as possible .
+            If you need assistance urgently , please call or whatsapp
+          </p>
+          <a href="#contactform" class="ctn">Contact</a>
+        </div>
+        <div class="col image-col">
+          <div class="image-gallery">
+            <img src="./resources/gallery/img1.jpg" alt="" srcset="" />
+            <img src="./resources/gallery/img2.jpg" alt="" srcset="" />
+            <img src="./resources/gallery/img3.jpg" alt="" srcset="" />
+            <img src="./resources/gallery/img4.jpg" alt="" srcset="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section id="contact" class="contact-details">
+      <h1 class="section-header">Contact</h1>
+
+      <div class="contact-wrapper">
+        <!-- Left contact page -->
+
+        <form id="contact-form" class="form-horizontal" role="form">
+          <input type="hidden" name="contact_number" />
+
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="NAME"
+                name="user_name"
+                value=""
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="EMAIL"
+                name="user_email"
+                value=""
+                required
+              />
+            </div>
+          </div>
+
+          <textarea
+            class="form-control"
+            rows="10"
+            placeholder="MESSAGE"
+            name="user_message"
+            required
+          ></textarea>
+
+          <button
+            class="btn btn-primary send-button"
+            id="submit"
+            type="submit"
+            value="SEND"
+          >
+            <div class="alt-send-button">
+              <i class="fa fa-paper-plane"></i
+              ><span class="send-text">SEND</span>
+            </div>
+          </button>
+        </form>
+
+        <!-- Left contact page -->
+
+        <div class="direct-contact-container" id="contactform">
+          <ul class="contact-list">
+            <li class="list-item">
+              <i class="fa fa-map-marker fa-2x"
+                ><span class="contact-text place">
+                  <br />70c Oxford Road <br />
+                  Riviera <br />
+                  Johannesburg</span
+                ></i
+              >
+            </li>
+
+            <li class="list-item">
+              <i class="fa fa-phone fa-2x"
+                ><span class="contact-text phone"
+                  ><a href="011 880" title="Give me a call">
+                    <br />011 880 8124 / 066 007 7750</a
+                  ></span
+                ></i
+              >
+            </li>
+
+            <li class="list-item">
+              <i class="fa fa-envelope fa-2x"
+                ><span class="contact-text gmail"
+                  ><a href="rental@glowhire.co.za" title="Send me an email">
+                    <br />RENTAL@GLOWHIRE.CO.ZA</a
+                  ></span
+                ></i
+              >
+            </li>
+          </ul>
+
+          <hr />
+          <ul class="social-media-list">
+            <li>
+              <a href="#" target="_blank" class="contact-icon">
+                <i class="fa fa-facebook" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="contact-icon">
+                <i class="fa fa-twitter" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="contact-icon">
+                <i class="fa fa-instagram" aria-hidden="true"></i
+              ></a>
+            </li>
+          </ul>
+          <hr />
+
+          <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script>
+      const menuBtn = document.querySelector(".menu-btn");
+      const navLinks = document.querySelector(".nav-links");
+
+      menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("mobile-menu");
+      });
+      navLinks.addEventListener("click", () => {
+        navLinks.classList.toggle("mobile-menu");
+      });
+    </script>
+  </body>
+</html>
